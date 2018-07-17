@@ -1,0 +1,13 @@
+
+<div style="margin:50px;">
+  <h3>Edit User</h3>
+<%= @user.id %>
+  <%= form_for @user do |f| %>
+    <%= f.text_field :name, placeholder: @user.name   %><br />
+    <%= f.number_field :age, placeholder: @user.age.to_i %><br />
+    <%= f.submit %>
+  <% end %>
+   <%=
+  link_to 'View All', users_path(@users)
+  %> 
+</div>
